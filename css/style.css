@@ -9,6 +9,7 @@
 }
 
 html, body{
+	font-family: var(--main-font);
 	margin: 0 auto;
     max-width: 1920px;
     padding: 0 22px;
@@ -60,8 +61,8 @@ html, body{
 	margin-top: 2.5%;
 	display: column;
 	flex-direction: row;
-	border-left: 3px solid black;
-	
+	border-left: 10px solid black;
+	border-image: linear-gradient(#3c59a3, #ffa572) 30;
 }
 
 .titolo_paragrafo{
@@ -75,7 +76,6 @@ html, body{
 	display: flex;
 	flex-direction: row;
 	min-height: 20vh;
-	max-height:	40vh;
 }
 
 .content{
@@ -83,6 +83,7 @@ html, body{
 	width: 50%;
 	font-weight: 700;
 	margin-left: 2%;
+	font-size: 125%;
 }
 
 .immagine{
@@ -93,7 +94,7 @@ html, body{
 }
 
 .immagine_paragrafo{
-	width: 50%;
+	width: 100%;
 	padding: 2% 2% 2% 2%;
 	border-radius: 35px;
 	-webkit-border-radius: 35px;
