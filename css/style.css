@@ -5,7 +5,7 @@
 :root{
 	--main-font: 'San Francisco', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
 	--titolo-principale: 12em;
-	--titoli-paragrafi: 8em;
+	--titoli-paragrafi: 6em;
 }
 
 html, body{
@@ -80,7 +80,8 @@ html, body{
 
 .content{
 	/*border: 3px solid pink;/*bordo per gestire spazio*/
-	width: 50%;
+	width: 45%;
+	margin: 2% 5% 0% 0%;
 	font-weight: 700;
 	margin-left: 2%;
 	font-size: 125%;
@@ -91,6 +92,9 @@ html, body{
 	justify-content: center;
 	/*border: 3px solid purple;/*bordo per gestire spazio*/
 	width: 50%;
+	margin: 2% 0% 0% 0%;
+	align-content: center;
+	align-items: center;
 }
 
 .immagine_paragrafo{
@@ -101,4 +105,9 @@ html, body{
 	-moz-border-radius: 35px;
 	-ms-border-radius: 35px;
 	-o-border-radius: 35px;
+	/*border: 3px solid orange;/*bordo per gestire spazio*/
+}
+
+b{
+	color:red;
 }
