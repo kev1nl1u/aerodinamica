@@ -4,11 +4,17 @@
 
 :root{
 	--main-font: 'San Francisco', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+	--titolo-principale: 12em;
+	--titoli-paragrafi: 8em;
 }
 
 html, body{
-	padding: 0;
-	margin: 0;
+	margin: 0 auto;
+    max-width: 1920px;
+    padding: 0 22px;
+    padding-left: max(22px,env(safe-area-inset-left));
+    padding-right: max(22px,env(safe-area-inset-right));
+	overflow-x: hidden;
 }
 
 .container100vh{
@@ -16,19 +22,82 @@ html, body{
 	height: 100vh;
 }
 
-.main-title-container{
-	font-size: 12em;
-	line-height: 0.85em;
-	font-weight: 700;
-	height: 100%;
-	width: 100%;
-	background-color: #fff;
+.main-title-container-out{
 	display: flex;
 	align-items: end;
 	justify-content: left;
-	background: url(../img/tramonto-pazzo.webp);
-	background-size: cover;
-	background-position: bottom;
-	-webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
+}
+
+.main-title-container{
+	font-size: 17vw;
+	line-height: 0.85em;
+	font-weight: 700;
+	
+}
+
+/*************************************/
+
+.containerParagrafi{
+	/*border: 3px solid red; /*bordo per gestire spazi*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	margin: 1% 15% 1% 0%;
+}
+
+.sfondo_paragrafi{
+	z-index: 1;
+	position: absolute;
+	width: 90%;
+}
+
+.paragrafo{
+	/*border: 3px solid blue;
+	/*bordoperspazi*/z-index: 2;
+	align-self: center;
+	width: 90%;
+	margin-top: 2.5%;
+	display: column;
+	flex-direction: row;
+	border-left: 3px solid black;
+	
+}
+
+.titolo_paragrafo{
+	/*border: 3px solid green;/*bordo per festire spazi*/
+	width: 99%;
+	margin-left: 1%;
+	font-size: var(--titoli-paragrafi);
+}
+
+.content_paragrafo{
+	display: flex;
+	flex-direction: row;
+	min-height: 20vh;
+	max-height:	40vh;
+}
+
+.content{
+	/*border: 3px solid pink;/*bordo per gestire spazio*/
+	width: 50%;
+	font-weight: 700;
+	margin-left: 2%;
+}
+
+.immagine{
+	display: flex;
+	justify-content: center;
+	/*border: 3px solid purple;/*bordo per gestire spazio*/
+	width: 50%;
+}
+
+.immagine_paragrafo{
+	width: 50%;
+	padding: 2% 2% 2% 2%;
+	border-radius: 35px;
+	-webkit-border-radius: 35px;
+	-moz-border-radius: 35px;
+	-ms-border-radius: 35px;
+	-o-border-radius: 35px;
 }
