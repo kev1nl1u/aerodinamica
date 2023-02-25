@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/style.css" type="text/css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 	<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 	<title>B-2 Spirit</title>
@@ -25,6 +26,7 @@
 			width: 40vw;
 			top: 35vh;
 			left: 30vw;
+			z-index: 10;
 		}
 	</style>
 </head>
@@ -35,11 +37,11 @@
 			B-2<br>SPIRIT
 		</div>
 		<a href="index.html" class="nav-link">
-			<img src="img/"><span>Aerodinamica</span>
+			<img src="img/aerodynamics-icon.png"><span>Aerodinamica</span>
 		</a>
 	</div>
 	<div class="containerMod3D">
-		<div class="titolo-mod-3d">AEREODINAMICITA'<br>DELLA STRUTTURA</div>
+		<div class="titolo-mod-3d">AEREODINAMICITÀ<br>DELLA STRUTTURA</div>
 		<model-viewer src="assets/scene.gltf" orientation="-10deg 10deg -30deg" camera-orbit="auto auto 1m" scale="1 1 1" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/scene.gltf" class="modello-3D"></model-viewer>
 		</div>
 
@@ -47,7 +49,7 @@
 
 	<script src="js/moveonscroll.js"></script>
 
-	<script src="js/hidenav.js"></script>
+	<script src="js/hidenavB2.js"></script>
 
 </body>
 </html>

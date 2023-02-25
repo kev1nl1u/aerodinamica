@@ -5,7 +5,8 @@
 :root{
 	--main-font: 'San Francisco', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
 	--titolo-principale: 12em;
-	--titoli-paragrafi: 6em;
+	--titoli-paragrafi: 3em;
+	--normal-text-size: 18px;
 }
 
 /* scrollbar */
@@ -92,6 +93,7 @@ body{
 	height: 25px;
 	text-decoration: none;
 	color: black;
+	margin-top: 50px;
 }
 
 .b-2-btn{
@@ -116,13 +118,17 @@ body{
 
 /*************************************/
 
-.containerParagrafi{
-	/*border: 3px solid red; /*bordo per gestire spazi*/
+.containerParagrafi-out{
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
+}
+
+.containerParagrafi{
 	width: 100%;
-	margin: 1% 15% 1% 0%;
+	max-width: 980px;
 }
 
 .sfondo_paragrafi{
@@ -131,46 +137,69 @@ body{
 	width: 90%;
 }
 
+.grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.grid div, .column div{
+	margin: 0 25px;
+}
+
+.column{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 .paragrafo{
-	/*border: 3px solid blue;
-	/*bordoperspazi*/z-index: 2;
+	z-index: 2;
 	align-self: center;
-	width: 90%;
 	margin-top: 2.5%;
-	display: column;
-	flex-direction: row;
-	border-left: 10px solid black;
-	border-image: linear-gradient(#3c59a3, #ffa572) 30;
 }
 
 .titolo_paragrafo{
-	/*border: 3px solid green;/*bordo per festire spazi*/
-	width: 99%;
-	margin-left: 1%;
+	margin: 0 25px;
 	font-size: var(--titoli-paragrafi);
+	font-weight: 600;
 }
 
 .content_paragrafo{
 	display: flex;
-	flex-direction: row;
 	min-height: 20vh;
 }
 
 .content{
-	/*border: 3px solid pink;/*bordo per gestire spazio*/
-	width: 45%;
-	margin: 2% 5% 0% 0%;
-	font-weight: 700;
-	margin-left: 2%;
-	font-size: 125%;
+	text-align: justify;
+	font-weight: 500;
+	font-size: var(--normal-text-size);
+	max-width: 700px;
 }
 
-.immagine{
+.grid .immagine img{
+	border-right: 5px solid;
+	border-image: linear-gradient(#3c59a3, #ffa572) 30;
+}
+
+.column .content{
+	border-left: 5px solid;
+	border-image: linear-gradient(#3c59a3, #ffa572) 30;
+	padding-left: 15px;
+}
+
+.colummn .immagine{
 	display: flex;
 	justify-content: center;
-	/*border: 3px solid purple;/*bordo per gestire spazio*/
-	width: 50%;
-	margin: 2% 0% 0% 0%;
+	width: 100%;
+	max-width: 700px;
+	align-content: center;
+	align-items: center;
+}
+
+.grid .immagine{
+	display: flex;
+	justify-content: center;
 	align-content: center;
 	align-items: center;
 }
@@ -183,11 +212,6 @@ body{
 	-moz-border-radius: 35px;
 	-ms-border-radius: 35px;
 	-o-border-radius: 35px;
-	/*border: 3px solid orange;/*bordo per gestire spazio*/
-}
-
-b{
-	color:red;
 }
 
 /***********************************/
