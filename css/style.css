@@ -5,7 +5,7 @@
 :root{
 	--main-font: 'San Francisco', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
 	--titolo-principale: 12em;
-	--titoli-paragrafi: 8em;
+	--titoli-paragrafi: 6em;
 }
 
 /* scrollbar */
@@ -139,8 +139,8 @@ body{
 	margin-top: 2.5%;
 	display: column;
 	flex-direction: row;
-	border-left: 3px solid black;
-	
+	border-left: 10px solid black;
+	border-image: linear-gradient(#3c59a3, #ffa572) 30;
 }
 
 .titolo_paragrafo{
@@ -154,14 +154,15 @@ body{
 	display: flex;
 	flex-direction: row;
 	min-height: 20vh;
-	max-height:	40vh;
 }
 
 .content{
 	/*border: 3px solid pink;/*bordo per gestire spazio*/
-	width: 50%;
+	width: 45%;
+	margin: 2% 5% 0% 0%;
 	font-weight: 700;
 	margin-left: 2%;
+	font-size: 125%;
 }
 
 .immagine{
@@ -169,14 +170,50 @@ body{
 	justify-content: center;
 	/*border: 3px solid purple;/*bordo per gestire spazio*/
 	width: 50%;
+	margin: 2% 0% 0% 0%;
+	align-content: center;
+	align-items: center;
 }
 
 .immagine_paragrafo{
-	width: 50%;
+	width: 100%;
 	padding: 2% 2% 2% 2%;
 	border-radius: 35px;
 	-webkit-border-radius: 35px;
 	-moz-border-radius: 35px;
 	-ms-border-radius: 35px;
 	-o-border-radius: 35px;
+	/*border: 3px solid orange;/*bordo per gestire spazio*/
+}
+
+b{
+	color:red;
+}
+
+/***********************************/
+.containerMod3D{
+	/*border: 3px solid red ;*/
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 80vh;
+	margin: 5% 0% 0% 0%;
+	align-items: flex-start;
+}
+
+.titolo-mod-3d{
+	/*border: 3px solid blue;*/
+	font-size: 9vw;
+	font-weight: 900;
+	width: 60%;
+}
+
+.modello-3D{
+	align-self:flex-end;
+	float: right;
+	position: absolute;
+	/*border: 3px solid purple;*/
+	width: 100%;
+	height: 90vh;
+	margin-left: 10%;
 }
