@@ -85,7 +85,7 @@ body{
 	padding-right: 3px;
 }
 
-.b-2-btn-container{
+.btn-container{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -93,13 +93,12 @@ body{
 	height: 25px;
 	text-decoration: none;
 	color: black;
-	margin-top: 50px;
+	margin: 50px 0;
 }
 
-.b-2-btn{
+.btn{
 	height: 100%;
 	border-radius: 25px;
-	background: url(../img/blu-camouflage.jpg);
 	padding: 10px 20px;
 	display: flex;
 	align-items: center;
@@ -109,11 +108,52 @@ body{
 	text-decoration: none;
 }
 
-.b-2-btn img{
+.b-2-btn{
+	background: url(../img/blu-camouflage.jpg);
+}
+
+.aerodinamica-btn{
+	background: url(../img/tramonto-pazzo.webp);
+}
+
+.btn img{
 	height: 90%;
 	padding-right: 5px;
 }
 
+.footer{
+	margin-top: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.footer div{
+	height: 20px;
+	padding: 5px 0;
+}
+
+.authors{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.links{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.links a{
+	color: #00f;
+}
+
+.footer-links-icon{
+	height: 90%;
+}
 
 
 /*************************************/
