@@ -8,7 +8,33 @@
 	--titoli-paragrafi: 8em;
 }
 
-html, body{
+/* scrollbar */
+::-webkit-scrollbar {
+	width: 14px;
+  }
+  
+  ::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 14px 14px transparent;
+	border: solid 4px transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+	box-shadow: inset 0 0 14px 14px #666;
+	border: solid 3px transparent;
+	border-radius: 14px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+	box-shadow: inset 0 0 14px 14px #909090;
+  }
+  
+  ::-webkit-scrollbar-button {
+	display: none;
+  }
+  
+
+body{
+	font-family: var(--main-font);
 	margin: 0 auto;
     max-width: 1920px;
     padding: 0 22px;
@@ -26,6 +52,7 @@ html, body{
 	display: flex;
 	align-items: end;
 	justify-content: left;
+	overflow: hidden;
 }
 
 .main-title-container{
@@ -34,6 +61,58 @@ html, body{
 	font-weight: 700;
 	
 }
+
+.nav-link{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	height: 25px;
+	text-decoration: none;
+	color: black;
+	z-index: 0;
+}
+
+.nav-link span:hover{
+	text-decoration: underline;
+}
+
+.nav-link img{
+	height: 100%;
+	padding-right: 3px;
+}
+
+.b-2-btn-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 25px;
+	text-decoration: none;
+	color: black;
+}
+
+.b-2-btn{
+	height: 100%;
+	border-radius: 25px;
+	background: url(../img/blu-camouflage.jpg);
+	padding: 10px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.b-2-btn img{
+	height: 90%;
+	padding-right: 5px;
+}
+
+
 
 /*************************************/
 
