@@ -4,8 +4,8 @@
 
 :root{
 	--main-font: 'San Francisco', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
-	--titolo-principale: 12em;
-	--titoli-paragrafi: 3em;
+	--size-sm: 35px;
+	--titoli-paragrafi: 45px;
 	--normal-text-size: 18px;
 }
 
@@ -36,12 +36,15 @@
 
 body{
 	font-family: var(--main-font);
-	margin: 0 auto;
     max-width: 1920px;
-    padding: 0 22px;
+	overflow-x: hidden;
+	margin: 0;
+}
+
+.padding{
+	padding: 0 22px;
     padding-left: max(22px,env(safe-area-inset-left));
     padding-right: max(22px,env(safe-area-inset-right));
-	overflow-x: hidden;
 }
 
 .container100vh{
@@ -56,11 +59,14 @@ body{
 	overflow: hidden;
 }
 
+.main-title-img::-webkit-scrollbar{
+	display: none;
+}
+
 .main-title-container{
 	font-size: 17vw;
 	line-height: 0.85em;
 	font-weight: 700;
-	
 }
 
 .nav-link{
@@ -122,7 +128,7 @@ body{
 }
 
 .footer{
-	margin-top: 100px;
+	padding: 50px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -158,17 +164,12 @@ body{
 
 /*************************************/
 
-.containerParagrafi-out{
+.containerParagrafi{
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-}
-
-.containerParagrafi{
-	width: 100%;
-	max-width: 980px;
 }
 
 .sfondo_paragrafi{
@@ -177,52 +178,57 @@ body{
 	width: 90%;
 }
 
-.grid{
+.grid-content{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
 
-.grid div, .column div{
-	margin: 0 25px;
-}
-
-.column{
+.paragrafo{
+	margin-top: 25px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
 }
 
-.paragrafo{
-	z-index: 2;
-	align-self: center;
-	margin-top: 2.5%;
+.paragrafo div{
+	max-width: 700px;
+}
+
+.p-grid div{
+	max-width: 980px !important;
 }
 
 .titolo_paragrafo{
-	margin: 0 25px;
+	max-width: 700px;
 	font-size: var(--titoli-paragrafi);
 	font-weight: 600;
+	margin: 25px 0;
+	line-height: 0.8em;
 }
 
-.content_paragrafo{
-	display: flex;
-	min-height: 20vh;
+.sub .titolo_paragrafo{
+	font-size: var(--size-sm) !important;
+}
+.sub .content{
+	border: none !important;
+}
+.sub{
+	max-width: 600px !important;
+}
+
+.column-content{
+	max-width: 700px;
 }
 
 .content{
+	line-height: 150%;
 	text-align: justify;
 	font-weight: 500;
 	font-size: var(--normal-text-size);
 	max-width: 700px;
 }
 
-.grid .immagine img{
-	border-right: 5px solid;
-	border-image: linear-gradient(#3c59a3, #ffa572) 30;
-}
-
-.column .content{
+.content{
 	border-left: 5px solid;
 	border-image: linear-gradient(#3c59a3, #ffa572) 30;
 	padding-left: 15px;
@@ -237,44 +243,77 @@ body{
 	align-items: center;
 }
 
-.grid .immagine{
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
-}
-
 .immagine_paragrafo{
 	width: 100%;
-	padding: 2% 2% 2% 2%;
-	border-radius: 35px;
-	-webkit-border-radius: 35px;
-	-moz-border-radius: 35px;
-	-ms-border-radius: 35px;
-	-o-border-radius: 35px;
+	padding: 15px 0;
+}
+
+.grid-table{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 10px 0;
+}
+
+.grid-table span:nth-child(even){
+	text-align: right;
 }
 
 /***********************************/
-.containerMod3D{
-	display: flex;
-	flex-direction: row;
+
+.containerMod3D-out{
 	width: 100%;
+	height: 105vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 25px;
+}
+
+.containerMod3D{
+	width: 100%;
+	height: 100%;
+	display: flex;
 	text-align: right;
 	justify-content: flex-end;
-	align-items: flex-end;
+	align-items: center;
 	position: relative;
-	height: 100vh;
 }
 
 .titolo-mod-3d{
-	font-size: 9vw;
-	font-weight: 900;
+	padding-right: 22px;
+	font-size: 12vw;
+	line-height: 0.85em;
+	font-weight: 700;
 }
 
 .modello-3D{
 	position: absolute;
-	height: 100vh;
+	height: 100%;
 	left: 0;
 	bottom: 0;
-	min-width: 70%;
+	min-width: 100%;
 }
+
+
+
+.video-container {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+  
+  .bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
