@@ -32,12 +32,17 @@
   ::-webkit-scrollbar-button {
 	display: none;
   }
+
+  #loading{
+	background-color:#fff;
+  }
   
 
 body{
 	font-family: var(--main-font);
     max-width: 1920px;
 	overflow-x: hidden;
+	overflow-y: hidden;
 	margin: 0;
 }
 
